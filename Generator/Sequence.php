@@ -33,6 +33,18 @@ class Sequence extends Base
      */
     public function get()
     {
+        // check min
+        if ($this->min < -1e9 || $this->min > 1e9)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$min is invalid');
+        }
+
+        // check max
+        if ($this->max < -1e9 || $this->max > 1e9)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$max is invalid');
+        }
+
         return $this->_request(array('min', 'max'));
     }
     

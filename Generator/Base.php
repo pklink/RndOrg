@@ -10,6 +10,10 @@ namespace RndOrg\Generator;
 
 require_once dirname(__FILE__) . '/Port.php';
 
+/**
+ *
+ * @throws \RuntimeException
+ */
 abstract class Base implements Port
 {
 
@@ -59,7 +63,7 @@ abstract class Base implements Port
     {
         // add default params
         $params = array_merge($params, array(
-            'col' => '_col',
+            'col'    => '_col',
             'format' => '_format',
             'rnd'
         ));
@@ -110,10 +114,10 @@ abstract class Base implements Port
 
 
     /**
-     * @param \HttpClient\Port $client
+     * @param \RndOrg\HttpClient\Port $client
      * @return void
      */
-    public function setHttpClientInstance(\HttpClient\Port $client)
+    public function setHttpClientInstance(\RndOrg\HttpClient\Port $client)
     {
         $this->_httpClientInstance = $client;
     }

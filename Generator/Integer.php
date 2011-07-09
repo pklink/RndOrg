@@ -56,6 +56,36 @@ class Integer extends Base
      */
     public function get()
     {
+        // check base
+        if (!in_array($this->base, array(self::BASE_BIN, self::BASE_OCT, self::BASE_DEC, self::BASE_HEX)))
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$base is invalid');
+        }
+
+        // check min
+        if ($this->min < -1e9 || $this->min > 1e9)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$min is invalid');
+        }
+
+        // check max
+        if ($this->max < -1e9 || $this->max > 1e9)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$max is invalid');
+        }
+
+        // check max > min
+        if ($this->min >= $this->max)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$max must be bigger than ' . __CLASS__ . '::$min');
+        }
+
+        // check numbers
+        if ($this->num < 1 || $this->num > 1e4)
+        {
+            throw new \UnexpectedValueException(__CLASS__ . '::$num is invalid');
+        }
+
         return $this->_request(array('base', 'min', 'max', 'num'));
     }
     
