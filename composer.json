@@ -1,7 +1,7 @@
 {
     "name": "pklink/rnd-org",
     "description": "PHP-Client for random.org",
-    "version":     "0.2",
+    "version":     "0.2-dev",
     "keywords":    ["random", "random.org", "client"],
     "homepage":    "https://github.com/pklink/RndOrg",
     "license":     "MIT",
