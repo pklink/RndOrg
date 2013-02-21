@@ -8,13 +8,12 @@
 
 namespace RndOrg\Generator;
 
-require_once dirname(__FILE__) . '/Port.php';
 
 /**
  *
  * @throws \RuntimeException
  */
-abstract class Base implements Port
+abstract class AbstractImpl implements \RndOrg\Generator
 {
 
     /**
@@ -59,7 +58,7 @@ abstract class Base implements Port
      * @param array $params "name of url param" => "name of class property" | "name of class property" = "name of url param"
      * @return array
      */
-    protected function _request($params = array())
+    protected function request($params = array())
     {
         // add default params
         $params = array_merge($params, array(

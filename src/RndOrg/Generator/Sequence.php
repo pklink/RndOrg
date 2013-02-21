@@ -8,9 +8,7 @@
 
 namespace RndOrg\Generator;
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Base.php';
-
-class Sequence extends Base
+class Sequence extends AbstractImpl
 {
 
     /**
@@ -45,7 +43,7 @@ class Sequence extends Base
             throw new \UnexpectedValueException(__CLASS__ . '::$max is invalid');
         }
 
-        return $this->_request(array('min', 'max'));
+        return $this->request(array('min', 'max'));
     }
     
 

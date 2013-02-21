@@ -1,0 +1,14 @@
+{
+    "name": "pklink/rnd-org",
+    "autoload": {
+        "psr-0": {
+            "RndOrg": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.14"
+    }
+}

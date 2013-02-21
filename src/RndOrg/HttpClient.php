@@ -6,9 +6,9 @@
  * @license MIT
  */
 
-namespace RndOrg\HttpClient;
+namespace RndOrg;
 
-interface Port
+interface HttpClient
 {
 
     /**

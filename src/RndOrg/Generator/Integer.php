@@ -8,9 +8,7 @@
 
 namespace RndOrg\Generator;
 
-require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'Base.php';
-
-class Integer extends Base
+class Integer extends AbstractImpl
 {
 
     const BASE_BIN = 2;
@@ -86,7 +84,7 @@ class Integer extends Base
             throw new \UnexpectedValueException(__CLASS__ . '::$num is invalid');
         }
 
-        return $this->_request(array('base', 'min', 'max', 'num'));
+        return $this->request(array('base', 'min', 'max', 'num'));
     }
     
 

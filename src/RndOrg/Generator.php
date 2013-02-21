@@ -7,9 +7,9 @@
  * @license MIT
  */
 
-namespace RndOrg\Generator;
+namespace RndOrg;
  
-interface Port
+interface Generator
 {
 
     /**
