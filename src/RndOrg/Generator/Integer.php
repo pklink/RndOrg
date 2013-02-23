@@ -75,7 +75,7 @@ class Integer extends AbstractImpl
         // check max > min
         if ($this->min >= $this->max)
         {
-            throw new \UnexpectedValueException(__CLASS__ . '::$max must be bigger than ' . __CLASS__ . '::$min');
+            throw new \UnexpectedValueException(__CLASS__ . '::$max has to be bigger than ' . __CLASS__ . '::$min');
         }
 
         // check numbers
